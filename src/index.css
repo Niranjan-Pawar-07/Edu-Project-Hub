@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #7e3af2;
+  --primary-dark: #6025d9;
+  --primary-light: #9d68fa;
+  --sidebar-bg: linear-gradient(180deg, #7e3af2 0%, #5727b0 100%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: #f6f7fb;
+}
+
+/* Animated gradient background for auth pages */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(-45deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Glassmorphism effect for auth forms */
+.auth-glass {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.18);
+}
